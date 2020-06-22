@@ -102,7 +102,9 @@
 
    
 
-10. 实例生命周期钩子：不要在选项 property 或回调上使用[箭头函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，比如 `created: () => console.log(this.a)` 或 `vm.$watch('a', newValue => this.myMethod())`。箭头函数并没有 `this`，`this`作为变量一直向上级词法作用域查找，直至找到为止，经常导致
+10. 实例生命周期钩子：不要在选项 property 或回调上使用[箭头函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，比如 `created: () => console.log(this.a)` 或 `vm.$watch('a', newValue => this.myMethod())`。箭头函数并没有 `this`，`this`作为变量一直向上级词法作用域查找，直至找到为止，经常导致错误
 
-    ![](C:\Users\Administrator\Desktop\lifecycle.png)
+    
+
+    ![https://cn.vuejs.org/images/lifecycle.png](https://cn.vuejs.org/images/lifecycle.png)
 
