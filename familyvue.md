@@ -96,7 +96,7 @@
 
 9. 数据与方法：当一个 Vue 实例被创建时，它将 `data` 对象中的所有的 property 加入到 Vue 的**响应式系统**中。当这些 property 的值发生改变时，视图将会产生“响应”，值得注意的是只有当实例被创建时就已经存在于 `data` 中的 property 才是**响应式**的。如果你知道你会在晚些时候需要一个 property，但是一开始它为空或不存在，那么你仅需要设置一些初始值；这里唯一的例外是使用 `Object.freeze()`，` Object.freeze(obj)   obj.name="sdsdfasfadfa"`这会阻止修改现有的 property，也意味着响应系统无法再*追踪*变化。 ` this.$watch('name', (newValue, oldValue)=> {})  this.$el  this.$data`
 
-   $data中修改的数据，和平常方法修改数据，有什么不同？实验了一下，也是可以响应式的
+   $data中修改的数据，和平常方法修改数据，有什么不同？实验了一下，也是可以实现响应式的
 
    ***
 
@@ -104,5 +104,5 @@
 
 10. 实例生命周期钩子：不要在选项 property 或回调上使用[箭头函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，比如 `created: () => console.log(this.a)` 或 `vm.$watch('a', newValue => this.myMethod())`。箭头函数并没有 `this`，`this`作为变量一直向上级词法作用域查找，直至找到为止，经常导致
 
-    ![https://cn.vuejs.org/images/lifecycle.png]()
+    ![](C:\Users\Administrator\Desktop\lifecycle.png)
 
